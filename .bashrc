@@ -123,6 +123,6 @@ git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-export PS1="\$(git_branch) \u@\h \[\033[1;32m\]\[\033[00m\]\W\$ "
+export PS1="\[\033[40;5;32m\]\[$(git_branch)\] \033[40;5;37m\]\u@\h:\[$(tput sgr0)\]\[\033[40;5;32m\][\w]\[$(tput sgr0)\]: \[$(tput sgr0)\]"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
