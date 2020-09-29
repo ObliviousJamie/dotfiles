@@ -25,7 +25,7 @@ function! ToggleHiddenAll()
     endif
 endfunction
 
-nnoremap <S-h> :call ToggleHiddenAll()<CR>
+nnoremap <F1> :call ToggleHiddenAll()<CR>
 
 "Set statusline
 set laststatus=2
